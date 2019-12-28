@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/cockroachdb/sentry-go"
 	"github.com/valyala/fasthttp"
 )
 
