@@ -1,7 +1,6 @@
 package sentry
 
 import (
-	"go/build"
 	"path/filepath"
 	"reflect"
 	"runtime"
@@ -222,7 +221,7 @@ func filterFrames(frames []Frame) []Frame {
 		}
 		// Skip Sentry internal frames, except for frames in _test packages (for
 		// testing).
-		if strings.HasPrefix(frame.Module, "github.com/getsentry/sentry-go") &&
+		if strings.HasPrefix(frame.Module, "github.com/cockroachdb/sentry-go") &&
 			!strings.HasSuffix(frame.Module, "_test") {
 			continue
 		}
@@ -230,16 +229,6 @@ func filterFrames(frames []Frame) []Frame {
 	}
 
 	return filteredFrames
-}
-
-func isInAppFrame(frame Frame) bool {
-	if strings.HasPrefix(frame.AbsPath, build.Default.GOROOT) ||
-		strings.Contains(frame.Module, "vendor") ||
-		strings.Contains(frame.Module, "third_party") {
-		return false
-	}
-
-	return true
 }
 
 func callerFunctionName() string {

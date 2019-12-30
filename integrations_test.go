@@ -183,7 +183,7 @@ func TestContextifyFrames(t *testing.T) {
 
 	frames := cfi.contextify([]Frame{{
 		Function: "Trace",
-		Module:   "github.com/getsentry/sentry-go",
+		Module:   "github.com/cockroachdb/sentry-go",
 		Filename: filename,
 		AbsPath:  abspath,
 		Lineno:   12,
