@@ -11,7 +11,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/cockroachdb/sentry-go"
 )
 
 func f1() *sentry.Stacktrace {
@@ -59,7 +59,7 @@ func TestNewStacktrace(t *testing.T) {
 			Frames: []sentry.Frame{
 				{
 					Function: "f1",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   18,
@@ -71,7 +71,7 @@ func TestNewStacktrace(t *testing.T) {
 			Frames: []sentry.Frame{
 				{
 					Function: "f2",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   22,
@@ -79,7 +79,7 @@ func TestNewStacktrace(t *testing.T) {
 				},
 				{
 					Function: "f1",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   18,
@@ -96,7 +96,7 @@ func TestNewStacktrace(t *testing.T) {
 			Frames: []sentry.Frame{
 				{
 					Function: "f3",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   25,
@@ -127,7 +127,7 @@ func TestExtractStacktrace(t *testing.T) {
 			Frames: []sentry.Frame{
 				{
 					Function: "RedPkgErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   29,
@@ -135,7 +135,7 @@ func TestExtractStacktrace(t *testing.T) {
 				},
 				{
 					Function: "BluePkgErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   33,
@@ -148,7 +148,7 @@ func TestExtractStacktrace(t *testing.T) {
 			Frames: []sentry.Frame{
 				{
 					Function: "RedPingcapErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   37,
@@ -156,7 +156,7 @@ func TestExtractStacktrace(t *testing.T) {
 				},
 				{
 					Function: "BluePingcapErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   41,
@@ -169,7 +169,7 @@ func TestExtractStacktrace(t *testing.T) {
 			Frames: []sentry.Frame{
 				{
 					Function: "RedGoErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   45,
@@ -177,7 +177,7 @@ func TestExtractStacktrace(t *testing.T) {
 				},
 				{
 					Function: "BlueGoErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
+					Module:   "github.com/cockroachdb/sentry-go_test",
 					Filename: "stacktrace_external_test.go",
 					AbsPath:  "ignored",
 					Lineno:   49,

@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/getsentry/sentry-go"
-	sentryfasthttp "github.com/getsentry/sentry-go/fasthttp"
+	"github.com/cockroachdb/sentry-go"
+	sentryfasthttp "github.com/cockroachdb/sentry-go/fasthttp"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/valyala/fasthttp"

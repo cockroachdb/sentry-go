@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/getsentry/sentry-go"
-	sentryhttp "github.com/getsentry/sentry-go/http"
+	"github.com/cockroachdb/sentry-go"
+	sentryhttp "github.com/cockroachdb/sentry-go/http"
 )
 
 type handler struct{}

@@ -19,7 +19,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/cockroachdb/sentry-go"
 )
 
 func main() {
